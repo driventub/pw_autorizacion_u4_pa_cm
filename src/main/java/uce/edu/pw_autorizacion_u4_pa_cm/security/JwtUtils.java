@@ -10,6 +10,8 @@ import io.jsonwebtoken.SignatureAlgorithm;
 public class JwtUtils {
 
     public String generateJWTToken(Authentication authentication, String username) {
-        return Jwts.builder().setSubject(username).setIssuedAt(new Date()).setExpiration(new Date(System.currentTimeMillis()+10000)).signWith(SignatureAlgorithm.HS512, "semilla1").compact();
+        return Jwts.builder().setSubject(username).setIssuedAt(new Date())
+                .setExpiration(new Date(System.currentTimeMillis() + 10000))
+                .signWith(SignatureAlgorithm.HS512, "semilla1").compact();
     }
 }
