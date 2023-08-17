@@ -25,3 +25,33 @@ inyectar Spring security
 configurar la semilla el algoritmo de encriptacion, semilla, token
 
 crear paquete security
+
+En service se crea una interface de spring security.
+
+## Taller 40
+
+encabezdo, payload, verificacion de la semilla
+
+- mecanimos de seguridad en el token: algoritmo de encriptacion, firma/semilla, tiempo de expiracion
+
+- el estandar (buenas practicas) para la expiracion del actual token hasta el siguiente es de 3-5 min.
+
+- la aplicacion deberia generar un nuevo token acabado el tiempo (da confianza) 
+
+- como no correponde a ninguno de los estereotipos normales, la capa de seguridad va con @Component
+
+- deben existir 2 apis, un api publica para poder registrarse o loguearse (token) y la segunda api para poder acceder a los recursos (api de negocios).
+
+- Una sesion se puede configurar para manejar una sesion por peticion, una siempre o el no usar sesion.
+
+- Sesion: espacio de memoria en donde estan los datos que manejamos.
+
+
+**Tipos de Sesion**
+
+- STATELESS: solamente cuando esta activa la sesion, se emplea el api y entonces la sesion termina.
+
+- 
+
+
+

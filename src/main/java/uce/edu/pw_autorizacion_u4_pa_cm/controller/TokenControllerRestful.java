@@ -18,7 +18,7 @@ public class TokenControllerRestful {
 
     // }
 
-    @GetMapping
+    @GetMapping("/obtener")
     public String obtenertoken(@RequestBody UsuarioTO usuario) {
         return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.Plxpieozy08GbnlTLdPQqxbFduwc8QW2nIDrcRKgpUk";
     }
