@@ -75,3 +75,12 @@ La URL se usa desde el servicio, es decir localhost:8080/-----/-----/ no va,
 La capacidad Rest retorna un token generado, pero antes necesitamos autenticarle, implementando una funcionalidad para eso, (para las funcionalidades de negocio)
 
 Finalmente lo que se compara es un usuario y contraseña de la base de datos
+
+cuando reconoce Spring la contraseña en la base de datos, debe estar encriptado dentro de la base de datos  
+
+Cuando se manda la autenticacion dentro del API debe estar en el body el username y password tal cual
+
+- Oauth2.0, servidor de recursos
+
+
+
