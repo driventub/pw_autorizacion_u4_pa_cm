@@ -51,7 +51,27 @@ encabezdo, payload, verificacion de la semilla
 
 - STATELESS: solamente cuando esta activa la sesion, se emplea el api y entonces la sesion termina.
 
-- 
+- ALWAYS: mantiene la sesion activa "siempre"
+
+- NEVER: sesion no se guarda al cerrar inclusive una pestaña
+
+**Para Web Security**
+
+- SecurityFilterChain
+- DaoAuthenticationProvider
+- PasswordEncoder
+- AuthenticationManager
 
 
 
+# Taller 41 
+
+Antes de generar el token, se deberia generar la autenticacion, solamente cuando esta autenticacion sea satisfatoria
+
+
+La URL se usa desde el servicio, es decir localhost:8080/-----/-----/ no va, 
+
+
+La capacidad Rest retorna un token generado, pero antes necesitamos autenticarle, implementando una funcionalidad para eso, (para las funcionalidades de negocio)
+
+Finalmente lo que se compara es un usuario y contraseña de la base de datos

@@ -5,7 +5,6 @@ import java.util.Date;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
 import io.jsonwebtoken.Jwts;
@@ -22,7 +21,7 @@ public class JwtUtils {
     @Value("${app.jwt.expiration.ms}")
     private Integer jwtExpiration;
 
-    public String generateJWTToken(Authentication authentication, String username) {
+    public String generateJWTToken( String username) {
 
         LOG.info("Semilla: " + jwtSecret + " Tiempo: " + jwtExpiration);
 
