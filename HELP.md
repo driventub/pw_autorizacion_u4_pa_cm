@@ -82,5 +82,16 @@ Cuando se manda la autenticacion dentro del API debe estar en el body el usernam
 
 - Oauth2.0, servidor de recursos
 
+## Taller 42
 
+- Unchecked: Excepciones que suceden en tiempo de ejecucion, pero no se controlan en compilacion. Es buena practica tratarlas. Lo mas comun es que el token expire (grant).
+- El filtro (es previo) ayuda a interceptar la validacion del token. Siempre deben heredar "OncePerRequestFilter", va a pedir el metodo a ejecutar en este filto, se usa el "ToFilter".
+- Antes de ejecutar/consumir el API.
+
+- La posicion del token para utilizar en el API es en la metadata (header).
+- El token se debe enviar en una cabecera de nombre "**Authorized**".Tambien debe venir con el valor, la siguiente nomenclatura "**Bearer_tokentokentoken**".
+
+- Se necesita sacar a validar el token fuera del bearer.
+
+- si el token no es valido, el request no se le permite pasar
 
