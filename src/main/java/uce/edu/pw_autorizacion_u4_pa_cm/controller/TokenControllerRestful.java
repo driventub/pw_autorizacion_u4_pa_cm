@@ -31,9 +31,10 @@ public class TokenControllerRestful {
     private JwtUtils jwtUtils;
 
     @GetMapping("/obtener")
+    // puse la semilla y tiempo en el usuarioTO 
     public String obtenertoken(@RequestBody UsuarioTO usuario) {
         this.authenticated(usuario.getUsername(), usuario.getPassword());
-        return this.jwtUtils.generateJWTToken(usuario.getUsername());
+        return this.jwtUtils.generateJWTToken(usuario.getUsername(), usuario.getSemilla(), usuario.getTiempoExpiracion());
         // return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.Plxpieozy08GbnlTLdPQqxbFduwc8QW2nIDrcRKgpUk";
     }
 
